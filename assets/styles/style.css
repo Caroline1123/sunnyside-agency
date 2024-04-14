@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./../images/photos/image-header.jpg);
+  background-size: cover;
+  background-position: 2% 0;
+  color: hsl(0, 0%, 100%);
+}
+
+h1, h2, h3, .more {
+  font-family: "Fraunces", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  letter-spacing: 0.5rem;
+  font-size: 4vw;
+}
+
+nav {
+  margin: 40px 60px 20px 40px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+nav img {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+nav a {
+  padding: 5px 20px;
+  text-align: right;
+  text-decoration: none;
+  font-weight: lighter;
+  color: hsl(0, 0%, 100%);
+}
+nav a:last-of-type {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Fraunces", sans-serif;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+}
+
+figure {
+  align-self: center;
+}
+
+.section {
+  display: flex;
+  overflow: hidden;
+}
+.section > * {
+  flex: 1;
+  height: 80vh;
+  width: 50vh;
+}
+.section figure > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service > * {
+  margin: 0 25% 5% 20%;
+}
+.service h2 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+.service p {
+  color: hsl(210, 4%, 67%);
+  font-weight: light;
+  display: inline-block;
+}
+.service .more {
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+}
+.service .more a {
+  text-decoration: none;
+  color: black;
+}
+.service .more a::before {
+  content: "";
+  position: absolute;
+  left: 16%;
+  bottom: 0;
+  width: 150px;
+  height: 12px;
+  transform: skew(-12deg) translateX(-50%);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#yellow::before {
+  background: hsl(51, 100%, 49%);
+}
+
+#pink::before {
+  background: hsl(7, 99%, 70%);
+}
+
+#design, #photography {
+  background-size: cover;
+  background-height: 100%;
+  background-width: auto;
+}
+#design, #photography {
+  justify-content: flex-end;
+}
+#design > *, #photography > * {
+  text-align: center;
+  vertical-align: bottom;
+}
+#design h3, #photography h3 {
+  font-size: 1.5vw;
+}
+
+#design {
+  background-image: url(./../images/photos/image-graphic-design.jpg);
+}
+#design > * {
+  color: hsl(167, 40%, 24%);
+}
+
+#photography {
+  background-image: url(./../images/photos/image-photography.jpg);
+}
+#photography > * {
+  color: hsl(198, 62%, 26%);
+}
+
+.comments {
+  margin: 8% 5%;
+  text-align: center;
+}
+.comments h3 {
+  flex: 100%;
+  display: block;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 0.15rem;
+  margin-bottom: 5%;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: row;
+}
+.testimonials div {
+  width: 20%;
+  padding: 0 2%;
+  flex: 1;
+}
+.testimonials div img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.testimonials div .comment {
+  color: hsl(213, 9%, 39%);
+  margin: 2em;
+  font-weight: light;
+}
+.testimonials div .name {
+  font-family: "Fraunces", sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.testimonials div .function {
+  color: hsl(210, 4%, 67%);
+  font-size: small;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.banner > img {
+  width: 25%;
+  height: auto;
+}
+
+.menu {
+  height: 50vh;
+}/*# sourceMappingURL=style.css.map */

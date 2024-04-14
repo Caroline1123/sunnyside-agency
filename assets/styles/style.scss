@@ -1,0 +1,268 @@
+// Importing fonts
+// Barlow
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Fraunces
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+// Color variables. Not sure where they were supposed to go, though ... 
+$softRed: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$designText: hsl(167, 40%, 24%);
+$photoText: hsl(198, 62%, 26%);
+$footer: hsl(168, 34%, 41%);
+$veryDark: hsl(212, 27%, 19%);
+$lessDark: hsl(213, 9%, 39%);
+$evenLessDark: hsl(232, 10%, 55%);
+$greyish: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+// font variable
+$fraunces: "Fraunces", sans-serif;
+
+// Media sizes
+$large: 1440px;
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font: {
+        size: 18px;
+        family: "Barlow", sans-serif;
+        weight: 600;
+    }
+}
+
+// HEADER STYLES
+// sets header background and size
+header {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    background: {
+        image: url(./../images/photos/image-header.jpg);
+        size: cover;
+        position: 2% 0;
+        }
+    color: $white;
+}
+
+h1, h2, h3, .more {
+    font-family: "Fraunces", sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align:center;
+    margin-top:5%;
+    margin-bottom:10%;
+    letter-spacing:0.5rem;
+    font-size:4vw;
+}
+
+// navigation bar styling
+nav {
+    margin:40px 60px 20px 40px;
+    display: flex;
+    justify-content:right;
+    position: relative;
+    img {
+        position: absolute;
+        right: 0;
+        left:0;
+    }
+    a {
+        padding: 5px 20px;
+        text-align:right;
+        text-decoration: none;
+        font-weight:lighter;
+        color:$white;
+    }
+    a:last-of-type {
+        text-transform: uppercase;
+        font-weight:bold;
+        font-size: 15px;
+        background-color: $white;
+        font-family: $fraunces;
+        padding: 10px 20px;
+        border-radius:25px;
+        color: black;
+    }
+}
+
+// centers figure elements
+figure {
+    align-self:center;
+}
+
+// ADD STYLES TO MAIN
+// Add general layouts to the page sections
+.section {
+    display:flex;
+    overflow:hidden;
+    & > * {
+        flex:1;
+        // height:80vh;
+        width:50vh;
+    }
+    figure > img {
+        width:100%;
+        height:auto;
+        object-fit:cover;
+    }
+}
+
+/* Styles the texts*/
+.service {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    & > * {
+        margin: 0 25% 5% 20%;
+    }
+    h2 {
+        font: {
+            size:2em;
+            weight:bolder;
+        }
+    }
+    p {
+        color: $greyish;
+        font-weight:light;
+        display:inline-block;
+    }
+    .more {
+        font-weight:bolder;
+        text-transform: uppercase;
+        position:relative;
+        a {
+            text-decoration:none;
+            color:black;
+        }
+        // Adds styling for "Learn more" underlines (thanks google)
+        a::before {
+            content: "";
+            position: absolute;
+            left: 16%;
+            bottom: 0;
+            width: 150px;
+            height: 12px;
+            transform: skew(-12deg) translateX(-50%);
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+}
+
+// Adds underline color to "learn more"
+#yellow::before {
+    background: $yellow;
+}
+// Adds underline color to "learn more"
+#pink::before {
+    background: $softRed;
+}
+
+//styles for cherry and orange things
+#design, #photography {
+    & {
+        justify-content: flex-end;
+    }
+    background: {
+        size:cover;
+        height:100%;
+        width: auto;
+    }
+    & > * {
+        text-align:center;
+        vertical-align:bottom;
+    }
+    h3 {
+        font-size:1.5vw;
+    }
+}
+
+#design {
+    background: {
+        image: url(./../images/photos/image-graphic-design.jpg);
+    }
+    & > * {
+        color: $designText;
+    }
+}
+
+#photography {
+    background: {
+        image: url(./../images/photos/image-photography.jpg);
+    }
+    & >* {
+        color:$photoText;
+    }
+}
+
+// Styling testimonials
+.comments {
+    margin: 8% 5%;
+    text-align: center;
+    h3 {
+        flex:100%;
+        display: block;
+        font-size:1.2vw;
+        text-transform: uppercase;
+        color: $greyish;
+        letter-spacing: 0.15rem;
+        margin-bottom:5%;
+    }
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    div {
+        width: 20%;
+        padding: 0 2%;
+        flex:1;
+        img {
+            border-radius:50%;
+            margin-bottom:30px;
+        }
+        .comment {
+            color : $lessDark;
+            margin: 2em;
+            font-weight:light;
+        }
+        .name {
+            font-family: $fraunces;
+            font-weight: bold;
+            margin-bottom:1rem;
+        }
+        .function {
+            color : $greyish;
+            font-size: small;
+        }
+    }
+}
+
+// Footer styling
+// Images banner
+.banner {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width:100%;
+    overflow:hidden;
+    object-fit:contain;
+    & > img {
+        width: 25%;
+        height:auto;
+    }
+}
+
+.menu {
+    height:50vh;
+    > img {
+        transf
+    }
+}
