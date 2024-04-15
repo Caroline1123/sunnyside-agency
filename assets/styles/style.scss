@@ -22,6 +22,7 @@ $fraunces: "Fraunces", sans-serif;
 
 // Media sizes
 $large: 1440px;
+$small : 375px;
 
 * {
     margin:0;
@@ -88,7 +89,7 @@ nav {
         font-size:2vw;
         overflow:hidden;
     }
-    //TO Fix: text is cropped if shrinked
+
     a:last-of-type {
         box-sizing: content-box;
         text-transform: uppercase;
@@ -153,7 +154,7 @@ nav {
         }
     }
     p {
-        font-size:1.5vw;
+        font-size:2vw;
         color: $greyish;
         font-weight:light;
         display:inline-block;
@@ -237,7 +238,7 @@ nav {
     h3 {
         flex:100%;
         display: block;
-        font-size:1.4vw;
+        font-size:2vw;
         text-transform: uppercase;
         color: $greyish;
         letter-spacing: 0.15rem;
@@ -271,7 +272,7 @@ nav {
             flex:1;
             color : $lessDark;
             margin: 2em;
-            font-size:1vw;
+            font-size:2vw;
             font-weight:light;
         }
         .name {
@@ -335,3 +336,58 @@ nav {
 .contact > a > img:hover {
         filter: brightness(0) invert(1);
     }
+
+
+@media (max-width: $small) {
+    .desktop_nav {
+        display : none;
+    }
+    .section {
+        flex-direction: column;
+        margin:0;
+        flex-wrap:wrap;
+        & > * {
+            width : 100%;
+        }
+        & > figure {
+            height: 40vh;
+        }
+        #egg {
+            order:-1;
+        }
+    }
+    .service {
+        min-height:60vh;
+        text-align:center;
+        justify-items: center;
+        h2 {
+            font-size: 6vw;
+        }
+        p {
+            font-size: 4vw;
+        }
+        .more {
+            align-self: center;
+        }
+    }
+    #design, #photography {
+        min-height: 100vh;
+        h3 {
+            font-size: 6vw;
+        }
+    }
+    .testimonials {
+        flex-direction: column;
+        div {
+            width: 100%;
+            .comment {
+                font-size: 5vw;
+            }
+            .name {
+                font-size: 4vw;
+            }
+        }
+    }
+
+
+}

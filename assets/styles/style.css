@@ -120,7 +120,7 @@ nav a:last-of-type:hover {
   font-weight: bolder;
 }
 .service p {
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: hsl(210, 4%, 67%);
   font-weight: light;
   display: inline-block;
@@ -194,7 +194,7 @@ nav a:last-of-type:hover {
 .comments h3 {
   flex: 100%;
   display: block;
-  font-size: 1.4vw;
+  font-size: 2vw;
   text-transform: uppercase;
   color: hsl(210, 4%, 67%);
   letter-spacing: 0.15rem;
@@ -229,7 +229,7 @@ nav a:last-of-type:hover {
   flex: 1;
   color: hsl(213, 9%, 39%);
   margin: 2em;
-  font-size: 1vw;
+  font-size: 2vw;
   font-weight: light;
 }
 .testimonials div .name {
@@ -289,4 +289,56 @@ nav a:last-of-type:hover {
 
 .contact > a > img:hover {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 375px) {
+  .desktop_nav {
+    display: none;
+  }
+  .section {
+    flex-direction: column;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .section > * {
+    width: 100%;
+  }
+  .section > figure {
+    height: 40vh;
+  }
+  .section #egg {
+    order: -1;
+  }
+  .service {
+    min-height: 60vh;
+    text-align: center;
+    justify-items: center;
+  }
+  .service h2 {
+    font-size: 6vw;
+  }
+  .service p {
+    font-size: 4vw;
+  }
+  .service .more {
+    align-self: center;
+  }
+  #design, #photography {
+    min-height: 100vh;
+  }
+  #design h3, #photography h3 {
+    font-size: 6vw;
+  }
+  .testimonials {
+    flex-direction: column;
+  }
+  .testimonials div {
+    width: 100%;
+  }
+  .testimonials div .comment {
+    font-size: 5vw;
+  }
+  .testimonials div .name {
+    font-size: 4vw;
+  }
 }/*# sourceMappingURL=style.css.map */
