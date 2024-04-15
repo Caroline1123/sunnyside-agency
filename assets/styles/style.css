@@ -33,8 +33,9 @@ h1 {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 10%;
-  letter-spacing: 0.5rem;
-  font-size: 4vw;
+  letter-spacing: 0.5vw;
+  font-size: 7vw;
+  text-wrap: wrap;
 }
 
 nav {
@@ -53,6 +54,7 @@ nav figure img {
 }
 nav a {
   flex: 10%;
+  padding: 0 4px 0 4px;
   text-decoration: none;
   font-weight: lighter;
   color: hsl(0, 0%, 100%);
@@ -228,19 +230,19 @@ nav a:last-of-type:hover {
 .testimonials div .comment {
   flex: 1;
   color: hsl(213, 9%, 39%);
-  margin: 2em;
+  margin: 1em;
   font-size: 2vw;
   font-weight: light;
 }
 .testimonials div .name {
   font-family: "Fraunces", sans-serif;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 1.5vw;
   margin-bottom: 1vh;
 }
 .testimonials div .function {
   color: hsl(210, 4%, 67%);
-  font-size: 0.8vw;
+  font-size: 1vw;
 }
 
 .banner {
@@ -335,10 +337,37 @@ nav a:last-of-type:hover {
   .testimonials div {
     width: 100%;
   }
+  .testimonials div figure {
+    width: 10vh;
+    height: 10vh;
+    margin-top: 5vw;
+    margin-left: 40%;
+  }
   .testimonials div .comment {
     font-size: 5vw;
   }
   .testimonials div .name {
     font-size: 4vw;
+  }
+  .testimonials div .function {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+  }
+  .banner {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .banner > img {
+    flex: 50%;
+    width: 50%;
+    height: auto;
+  }
+}
+@media (min-width: 375px) {
+  .smartphone_nav {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

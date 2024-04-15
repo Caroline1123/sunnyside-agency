@@ -63,8 +63,9 @@ h1 {
     text-align:center;
     margin-top:5%;
     margin-bottom:10%;
-    letter-spacing:0.5rem;
-    font-size:4vw;
+    letter-spacing:0.5vw;
+    font-size:7vw;
+    text-wrap:wrap;
 }
 
 // navigation bar styling
@@ -83,6 +84,7 @@ nav {
     }
     a {
         flex:10%;
+        padding: 0 4px 0 4px;
         text-decoration: none;
         font-weight:lighter;
         color:$white;
@@ -271,19 +273,19 @@ nav {
         .comment {
             flex:1;
             color : $lessDark;
-            margin: 2em;
+            margin: 1em;
             font-size:2vw;
             font-weight:light;
         }
         .name {
             font-family: $fraunces;
             font-weight: bold;
-            font-size: 1vw;
+            font-size: 1.5vw;
             margin-bottom:1vh;
         }
         .function {
             color : $greyish;
-            font-size: 0.8vw;
+            font-size: 1vw;
         }
     }
 }
@@ -379,6 +381,12 @@ nav {
     .testimonials {
         flex-direction: column;
         div {
+            figure {
+                width: 10vh;
+                height: 10vh;
+                margin-top: 5vw;
+                margin-left: 40%;
+            }
             width: 100%;
             .comment {
                 font-size: 5vw;
@@ -386,8 +394,28 @@ nav {
             .name {
                 font-size: 4vw;
             }
+            .function {
+                font-size: 3vw;
+                margin-bottom: 2vh;
+            }
         }
     }
+    .banner {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        flex-wrap:wrap;
+        width:100%;
+        & > img {
+            flex: 50%;
+            width:50%;
+            height:auto;
+        }
+    }
+}
 
-
+@media (min-width: $small) {
+    .smartphone_nav {
+        display:none;
+    }
 }
