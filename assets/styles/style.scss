@@ -4,19 +4,20 @@
 // Fraunces
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
-// Color variables. Not sure where they were supposed to go, though ... 
+// Color variables.
 $softRed: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
 $designText: hsl(167, 40%, 24%);
 $photoText: hsl(198, 62%, 26%);
-$footer: hsl(168, 34%, 41%);
+$footerBackground : #90D4C6;
+$footerText: hsl(168, 34%, 41%);
 $veryDark: hsl(212, 27%, 19%);
 $lessDark: hsl(213, 9%, 39%);
 $evenLessDark: hsl(232, 10%, 55%);
 $greyish: hsl(210, 4%, 67%);
 $white: hsl(0, 0%, 100%);
 
-// font variable
+// Font variable 
 $fraunces: "Fraunces", sans-serif;
 
 // Media sizes
@@ -44,13 +45,15 @@ header {
     background: {
         image: url(./../images/photos/image-header.jpg);
         size: cover;
-        position: 2% 0;
+        height:100%;
+        width: 100%;
+        position: top center;
         }
     color: $white;
 }
 
 h1, h2, h3, .more {
-    font-family: "Fraunces", sans-serif;
+    font-family: $fraunces;
 }
 
 h1 {
@@ -104,12 +107,12 @@ figure {
     overflow:hidden;
     & > * {
         flex:1;
-        // height:80vh;
-        width:50vh;
+        height:80vh;
+        width:50%;
     }
     figure > img {
         width:100%;
-        height:auto;
+        height:100%;
         object-fit:cover;
     }
 }
@@ -137,6 +140,7 @@ figure {
         font-weight:bolder;
         text-transform: uppercase;
         position:relative;
+        width: 25%;
         a {
             text-decoration:none;
             color:black;
@@ -145,11 +149,10 @@ figure {
         a::before {
             content: "";
             position: absolute;
-            left: 16%;
             bottom: 0;
-            width: 150px;
+            width: 100%;
             height: 12px;
-            transform: skew(-12deg) translateX(-50%);
+            transform: skew(-12deg) translateX(-5%);
             opacity: 0.5;
             z-index: -1;
         }
@@ -174,6 +177,7 @@ figure {
         size:cover;
         height:100%;
         width: auto;
+        position:center;
     }
     & > * {
         text-align:center;
@@ -261,8 +265,31 @@ figure {
 }
 
 .menu {
-    height:50vh;
-    > img {
-        transf
+    background-color: $footerBackground;
+    color: $footerText;
+    overflow:hidden;
+    height:30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg  {
+        margin-bottom:2%;
+        fill:$footerText;
+        align-content:center;
     }
+    a {
+        display: inline;
+        text-decoration: none;
+        color:$footerText;
+        padding:  0 10px;
+    }
+}
+
+.contact {
+    margin-top: 45px;
+}
+
+.contact > img {
+    padding: 0 10px;
 }
