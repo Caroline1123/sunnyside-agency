@@ -42,14 +42,15 @@ header {
     height:100vh;
     display:flex;
     flex-direction:column;
+    color: $white;
+    position:relative;
     background: {
         image: url(./../images/photos/image-header.jpg);
         size: cover;
         height:100%;
         width: 100%;
-        position: top center;
-        }
-    color: $white;
+        position: center;
+    }
 }
 
 h1, h2, h3, .more {
@@ -67,37 +68,56 @@ h1 {
 
 // navigation bar styling
 nav {
-    margin:40px 60px 20px 40px;
+    margin:40px 40px 20px 40px;
     display: flex;
-    justify-content:right;
+    align-items:center;
+    text-align:center;
     position: relative;
-    img {
-        position: absolute;
-        right: 0;
-        left:0;
+    figure {
+        flex:50%;
+        display:flex;
+        img {
+            width : 25vh;
+        }
     }
     a {
-        padding: 5px 20px;
-        text-align:right;
+        flex:10%;
         text-decoration: none;
         font-weight:lighter;
         color:$white;
+        font-size:2vw;
+        overflow:hidden;
     }
+    //TO Fix: text is cropped if shrinked
     a:last-of-type {
+        box-sizing: content-box;
         text-transform: uppercase;
+        text-align:center;
         font-weight:bold;
-        font-size: 15px;
         background-color: $white;
         font-family: $fraunces;
-        padding: 10px 20px;
-        border-radius:25px;
+        padding: 5px 5px;
+        border-radius:50px;
         color: black;
+    }
+    a:last-of-type:hover {
+        background-color: rgba(255,255,255,0.5)
     }
 }
 
-// centers figure elements
-figure {
+#arrow_down {
+    display: flex;
+    width: 20vh;
+    height: 20vh;
+    position:absolute;
+    bottom:30%;
     align-self:center;
+    justify-content:center;
+    img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+    }
 }
 
 // ADD STYLES TO MAIN
@@ -122,16 +142,18 @@ figure {
     display:flex;
     flex-direction:column;
     justify-content:center;
+    max-height:100%;
     & > * {
-        margin: 0 25% 5% 20%;
+        margin: 0 10vh 3vh 10vh;
     }
     h2 {
         font: {
-            size:2em;
+            size:3vw;
             weight:bolder;
         }
     }
     p {
+        font-size:1.5vw;
         color: $greyish;
         font-weight:light;
         display:inline-block;
@@ -140,18 +162,21 @@ figure {
         font-weight:bolder;
         text-transform: uppercase;
         position:relative;
-        width: 25%;
+        width: 30vh;
         a {
             text-decoration:none;
             color:black;
+        }
+        a:hover:before {
+            opacity: 1;
         }
         // Adds styling for "Learn more" underlines (thanks google)
         a::before {
             content: "";
             position: absolute;
             bottom: 0;
-            width: 100%;
-            height: 12px;
+            width: 60%;
+            height: 40%;
             transform: skew(-12deg) translateX(-5%);
             opacity: 0.5;
             z-index: -1;
@@ -209,42 +234,55 @@ figure {
 // Styling testimonials
 .comments {
     margin: 8% 5%;
-    text-align: center;
     h3 {
         flex:100%;
         display: block;
-        font-size:1.2vw;
+        font-size:1.4vw;
         text-transform: uppercase;
         color: $greyish;
         letter-spacing: 0.15rem;
         margin-bottom:5%;
+        text-align: center;
     }
 }
 
 .testimonials {
     display: flex;
-    flex-direction: row;
+    text-align: center;
     div {
         width: 20%;
         padding: 0 2%;
         flex:1;
-        img {
-            border-radius:50%;
-            margin-bottom:30px;
+        justify-items: center;
+        figure {
+            width: 7vw;
+            height : 7vw;
+            display: flex;
+            justify-content:center;
+            margin-left: 35%;
+            img {
+                border-radius:50%;
+                margin-bottom:2vh;
+                width: 100%;
+                height: 100%;
+            }
         }
         .comment {
+            flex:1;
             color : $lessDark;
             margin: 2em;
+            font-size:1vw;
             font-weight:light;
         }
         .name {
             font-family: $fraunces;
             font-weight: bold;
-            margin-bottom:1rem;
+            font-size: 1vw;
+            margin-bottom:1vh;
         }
         .function {
             color : $greyish;
-            font-size: small;
+            font-size: 0.8vw;
         }
     }
 }
@@ -268,13 +306,14 @@ figure {
     background-color: $footerBackground;
     color: $footerText;
     overflow:hidden;
-    height:30vh;
+    height:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     svg  {
-        margin-bottom:2%;
+        margin-top:5vh;
+        margin-bottom:2vh;
         fill:$footerText;
         align-content:center;
     }
@@ -283,13 +322,16 @@ figure {
         text-decoration: none;
         color:$footerText;
         padding:  0 10px;
+        &:hover {
+            color:$white;
+        }
     }
 }
 
 .contact {
-    margin-top: 45px;
+    margin:45px 0 4vw 0;
 }
 
-.contact > img {
-    padding: 0 10px;
-}
+.contact > a > img:hover {
+        filter: brightness(0) invert(1);
+    }
