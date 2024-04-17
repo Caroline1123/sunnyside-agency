@@ -10,7 +10,7 @@ $yellow: hsl(51, 100%, 49%);
 $designText: hsl(167, 40%, 24%);
 $photoText: hsl(198, 62%, 26%);
 $footerBackground : #90D4C6;
-$footerText: hsl(168, 34%, 41%);
+$footerText: #458c7e;
 $veryDark: hsl(212, 27%, 19%);
 $lessDark: hsl(213, 9%, 39%);
 $evenLessDark: hsl(232, 10%, 55%);
@@ -83,7 +83,7 @@ nav {
             width : 25vh;
         }
     }
-    a.desktop_a {
+    a.desktop_link {
         flex:10%;
         padding: 0 6px 0 6px;
         text-decoration: none;
@@ -346,7 +346,7 @@ nav {
     }
 }
 
-.menu {
+.footer_menu {
     background-color: $footerBackground;
     color: $footerText;
     overflow:hidden;
@@ -355,12 +355,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    svg  {
-        margin-top:5vh;
-        margin-bottom:2vh;
-        fill:$footerText;
-        align-content:center;
-    }
+
     a {
         display: inline;
         text-decoration: none;
@@ -372,6 +367,12 @@ nav {
     }
 }
 
+#footer_logo {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(44%) saturate(413%) hue-rotate(118deg) brightness(104%) contrast(87%);
+    margin-top:5vh;
+    margin-bottom:2vh;
+    align-content:center;
+}
 .contact {
     margin:45px 0 4vw 0;
 }
@@ -439,6 +440,7 @@ nav {
             }
         }
     }
+
     .banner {
         display: flex;
         flex-direction: row;

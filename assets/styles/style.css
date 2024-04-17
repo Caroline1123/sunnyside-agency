@@ -53,7 +53,7 @@ nav figure {
 nav figure img {
   width: 25vh;
 }
-nav a.desktop_a {
+nav a.desktop_link {
   flex: 10%;
   padding: 0 6px 0 6px;
   text-decoration: none;
@@ -298,9 +298,9 @@ nav a:last-of-type:hover {
   height: auto;
 }
 
-.menu {
+.footer_menu {
   background-color: #90D4C6;
-  color: hsl(168, 34%, 41%);
+  color: #458c7e;
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -308,20 +308,21 @@ nav a:last-of-type:hover {
   align-items: center;
   justify-content: center;
 }
-.menu svg {
-  margin-top: 5vh;
-  margin-bottom: 2vh;
-  fill: hsl(168, 34%, 41%);
-  align-content: center;
-}
-.menu a {
+.footer_menu a {
   display: inline;
   text-decoration: none;
-  color: hsl(168, 34%, 41%);
+  color: #458c7e;
   padding: 0 10px;
 }
-.menu a:hover {
+.footer_menu a:hover {
   color: hsl(0, 0%, 100%);
+}
+
+#footer_logo {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(44%) saturate(413%) hue-rotate(118deg) brightness(104%) contrast(87%);
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  align-content: center;
 }
 
 .contact {
