@@ -33,8 +33,9 @@ h1 {
   text-align: center;
   margin-top: 5%;
   letter-spacing: 0.5vw;
-  font-size: 5vw;
+  font-size: 50px;
   text-wrap: wrap;
+  margin: 0 30px;
 }
 
 nav {
@@ -64,17 +65,27 @@ nav a.desktop_a {
 nav #dropdown_menu {
   display: none;
   position: absolute;
-  border-radius: 25%;
   left: 0;
+  margin-top: 5%;
+  border-radius: 5%;
   padding: 5% 0;
   min-width: 100%;
   z-index: 15;
   height: 50vh;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
   flex-direction: column;
   background-color: white;
+}
+nav #dropdown_menu:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -7%;
+  width: 0;
+  height: 0;
+  border-left: 9vh solid transparent;
+  border-bottom: 10vh solid white;
 }
 nav #dropdown_menu a {
   text-decoration: none;
@@ -108,7 +119,7 @@ nav a:last-of-type:hover {
   width: 20vh;
   height: 20vh;
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
   align-self: center;
   justify-content: center;
 }
@@ -399,5 +410,8 @@ nav a:last-of-type:hover {
 @media (max-width: 500px) {
   .desktop_nav {
     display: none;
+  }
+  h1 {
+    font-size: 8vw;
   }
 }/*# sourceMappingURL=style.css.map */
