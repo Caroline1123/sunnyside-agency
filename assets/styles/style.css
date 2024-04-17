@@ -62,6 +62,9 @@ nav a.desktop_link {
   font-size: 2vw;
   overflow: hidden;
 }
+nav a.desktop_link:hover {
+  color: rgb(230, 230, 230);
+}
 nav #dropdown_menu {
   display: none;
   position: absolute;
@@ -112,6 +115,7 @@ nav a:last-of-type {
 }
 nav a:last-of-type:hover {
   background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
 
 #arrow_down {
